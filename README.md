@@ -1,2 +1,2 @@
 # HM2
-Second major project of my Introduction to Computing course.
+Second major project for my Introduction to Computing course.
