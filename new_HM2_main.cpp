@@ -124,11 +124,7 @@ int main() {
 			if (sourceBase >= 2 && sourceBase <= 9) { //For source number systems 2-9.
 
 				/* CHOOSE TARGET NUMBER SYSTEM MENU */
-				for (int i = 1; i <= windowWidth; i++) { //Prints the top row of the header.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the top row of the header.
 
 				cout << endl;
 				cout << "Source Number System: " << sourceBase << " ";
@@ -141,11 +137,7 @@ int main() {
 
 				cout << endl;
 
-				for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the header.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the bottom row of the header.
 
 				cout << endl;
 				cout << "Choose your target number system: " << endl;
@@ -153,11 +145,7 @@ int main() {
 				cout << "Input any other value to exit the program." << endl;
 				cin >> targetBase;
 
-				for (int i = 1; i <= windowWidth; i++) { //Prints the botton row of the window.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the botton row of the window.
 
 				cout << endl << endl;
 
@@ -169,20 +157,12 @@ int main() {
 				} else {
 
 					/* CONVERSION WINDOW */
-					for (int i = 1; i <= windowWidth; i++) { //Prints the top row of the header.
-
-						cout << "=";
-
-					}
+					PrintSeparator(); //Prints the top row of the header.
 
 					cout << endl;
 					cout << "Source Number System: " << sourceBase << ", Target Number System: " << targetBase << endl;
 
-					for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the header.
-
-						cout << "=";
-
-					}
+					PrintSeparator(); //Prints the bottom row of the header.
 
 					cout << endl;
 					cout << "Input your number in source number system:" << endl;
@@ -233,11 +213,7 @@ int main() {
 					cout << "Decimal: " << targetNum << endl;
 					cout << "You will be returned to the main menu." << endl;
 
-					for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the window.
-
-					cout << "=";
-
-					}
+					PrintSeparator(); //Prints the bottom row of the window.
 
 					cout << endl << endl;
 
@@ -250,11 +226,7 @@ int main() {
 			} else if (sourceBase == 10) { //For source number system 10 (decimal).
 
 				/* CHOOSE TARGET NUMBER SYSTEM MENU */
-				for (int i = 1; i <= windowWidth; i++) { //Prints the top row of the header.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the top row of the header.
 
 				cout << endl;
 				cout << "Source Number System: " << sourceBase << " ";
@@ -267,11 +239,7 @@ int main() {
 
 				cout << endl;
 
-				for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the header.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the bottom row of the header.
 
 				cout << endl;
 				cout << "Choose your target number system: " << endl;
@@ -323,11 +291,7 @@ int main() {
 				cout << "Input any other value to exit the program." << endl;
 				cin >> targetBase;
 
-				for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the window.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the bottom row of the window.
 
 				cout << endl << endl;
 
@@ -339,21 +303,13 @@ int main() {
 				} else {
 
 					/* CONVERSION WINDOW */
-					for (int i = 1; i <= windowWidth; i++) { //Prints the top row of the header.
-
-						cout << "=";
-
-					}
-
+					PrintSeparator(); //Prints the top row of the header.
+					
 					cout << endl;
 					cout << "Source Number System: " << sourceBase << ", Target Number System: " << targetBase;
 					cout << endl;
 
-					for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the header.
-
-						cout << "=";
-
-					}
+					PrintSeparator(); //Prints the bottom row of the header.
 
 					cout << endl;
 					cout << "Input your number in source number system:" << endl;
@@ -466,11 +422,7 @@ int main() {
 
 					cout << "You will be returned to the main menu." << endl;
 
-					for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the window.
-
-					cout << "=";
-
-					}
+					PrintSeparator(); //Prints the bottom row of the window.
 
 					cout << endl << endl;
 
@@ -484,11 +436,7 @@ int main() {
 			} else if (sourceBase == 16) { //For source number system 16 (hexadecimal).
 
 				/* CHOOSE TARGET NUMBER SYSTEM MENU */
-				for (int i = 1; i <= windowWidth; i++) { //Prints the top row of the header.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); { //Prints the top row of the header.
 
 				cout << endl;
 				cout << "Source Number System: " << sourceBase << " ";
@@ -501,11 +449,7 @@ int main() {
 
 				cout << endl;
 
-				for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the header.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the bottom row of the header.
 
 				cout << endl;
 				cout << "Choose your target number system: " << endl;
@@ -514,11 +458,7 @@ int main() {
 				cout << "Input any other value to exit the program." << endl;
 				cin >> targetBase;
 
-				for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the window.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the bottom row of the window.
 
 				cout << endl << endl;
 
@@ -530,20 +470,12 @@ int main() {
 				} else {
 
 					/* CONVERSION WINDOW */
-					for (int i = 1; i <= windowWidth; i++) { //Prints the top row of the header.
-
-						cout << "=";
-
-					}
+					PrintSeparator(); //Prints the top row of the header.
 
 					cout << endl;
 					cout << "Source Number System: " << sourceBase << ", Target Number System: " << targetBase << endl;
 
-					for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the header.
-
-						cout << "=";
-
-					}
+					PrintSeparator(); //Prints the bottom row of the header.
 
 					cout << endl;
 					cout << "Input your number in source number system:" << endl;
@@ -746,11 +678,7 @@ int main() {
 
 					cout << "You will be returned to the main menu." << endl;
 
-					for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the window.
-
-						cout << "=";
-
-					}
+					PrintSeparator(); //Prints the bottom row of the window.
 
 					cout << endl << endl;
 
@@ -772,11 +700,7 @@ int main() {
 		/* CONFIRM CLOSE WINDOW */
 		if (confirmQuit) {
 
-			for (int i = 1; i <= windowWidth; i++) { //Prints the top row of the header.
-
-				cout << "=";
-
-			}
+			PrintSeparator(); //Prints the top row of the header.
 
 			cout << endl;
 
@@ -796,11 +720,7 @@ int main() {
 
 			cout << endl;
 
-			for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the header.
-
-				cout << "=";
-
-			}
+			PrintSeparator(); //Prints the bottom row of the header.
 
 			cout << endl;
 			cout << "Are you sure you want to quit the program? (Y/N)" << endl;
@@ -809,11 +729,8 @@ int main() {
 			if (yesOrNo == 'Y') {
 
 				cout << "Bye!" << endl;
-				for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the window.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the bottom row of the window.
+				
 				cout << endl;
 
 				runProgram = false;
@@ -824,11 +741,8 @@ int main() {
 			} else {
 
 				cout << "You will be returned to the main menu." << endl;
-				for (int i = 1; i <= windowWidth; i++) { //Prints the bottom row of the window.
-
-					cout << "=";
-
-				}
+				PrintSeparator(); //Prints the bottom row of the window.
+				
 				cout << endl << endl;
 
 				confirmQuit = false;
