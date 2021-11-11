@@ -4,9 +4,7 @@ New HM2
 */
 
 #include <iostream>
-#include <cmath> //Library needed to use pow() function.
 #include <cctype> //Library needed to use isxdigit() function.
-#include <string> //Library needed to use string operations.
 #include "HM2_Functions.hpp"
 using namespace std;
 
@@ -307,27 +305,7 @@ int main() {
 
 					if ((targetBase >= 2) && (targetBase <= 9)) { //Decimal-to-base(2-9) conversion.
 
-						/* DECIMAL-TO-BASE(2-9) CONVERSION.
-						Based on in-class presentation (Mar 3) and Demo 4.15.
-						Modified to work for (1) numbers of base 2 to base 9, and (2) decimals input as strings. */
-
-					    const int decimalBase = 10; //Base value of decimals.
-					    long long placeValue = 1; //Updates based on decimalBase. Needed to put the digits in the right place.
-					    int decimalInt = 0; //Stores the value of sourceNum as an integer.
-
-					    for (int i = 0; i < sourceNum.size(); i++) { //Converts the string decimal into an integer decimal.
-
-					        decimalInt += (sourceNum[i] - '0') * pow(decimalBase, sourceNum.size() - (i + 1));
-
-					    }
-
-					    while (decimalInt > 0) {
-
-					        targetNum += (decimalInt % targetBase) * placeValue;
-					        decimalInt /= targetBase;
-					        placeValue *= decimalBase;
-
-					    }
+					    targetNum = stoi(DectoBase(sourceNum, targetBase));
 
 					    switch (targetBase) {
 
@@ -364,47 +342,7 @@ int main() {
 
 					if (targetBase == 16) { //Decimal-to-hexadecimal conversion.
 
-						/* DECIMAL-TO-HEXADECIMAL CONVERSION.
-						Based on in-class presentation (Mar 3) and Demo 4.15.
-						Modified to convert remainder values greater than 9 to their corresponding hexadecimal letter. */
-
-					    const int decimalBase = 10; //Base value of decimals.
-					    int decimalInt = 0; //Stores the value of sourceNum as an integer.
-
-					    for (int i = 0; i < sourceNum.size(); i++) { //Converts the string decimal into an integer decimal.
-
-					        decimalInt += (sourceNum[i] - '0') * pow(decimalBase, sourceNum.size() - (i + 1));
-
-					    }
-
-					    while (decimalInt > 0) { //Expanded version of decimal-to-base(2-9) code.
-
-					        int rem = decimalInt % targetBase; //Holds the result of decimalInt % targetBase.
-
-					        if (rem <= 9) {
-
-					            char temp = rem + '0'; //Stores a digit based on the ASCII value derived from rem + '0'.
-					            targetNumStr.push_back(temp);
-
-					        } else {
-
-					            char temp = rem - 10 + 'A'; //Stores a letter based on the ASCII value derived rem - 10 + 'A'. Inverse of letter-to-number conversion from Demo 4.15 (letter - 'A' + 10).
-					            targetNumStr.push_back(temp);
-
-					        }
-
-					        decimalInt /= targetBase;
-
-					    }
-
-					    for (int i = 0; i < targetNumStr.size() / 2; i++) { //Reverses the string to print the characters in the right order.
-
-					        char temp = targetNumStr[i];
-					        targetNumStr[i] = targetNumStr[targetNumStr.size() - (i + 1)];
-					        targetNumStr[targetNumStr.size() - (i + 1)] = temp;
-
-					    }
-
+					    targetNumStr = DectoHex(sourceNum);
 					    cout << "Hexadecimal: " << targetNumStr << endl;
 
 					}
