@@ -7,6 +7,7 @@ New HM2
 #include <cmath> //Library needed to use pow() function.
 #include <cctype> //Library needed to use isxdigit() function.
 #include <string> //Library needed to use string operations.
+#include "HM2_Functions.hpp"
 using namespace std;
 
 const int windowWidth = 50; //Sets the width of the "window" of the program. Used in FOR loops where "=" is printed.
@@ -197,19 +198,7 @@ int main() {
 					}
 
 					cin >> sourceNum;
-
-					/* BASE(2-9)-TO-DECIMAL CONVERSION.
-					Based on Demo 4.15.
-					Modified to work for numbers of base 2 to base 9. */
-
-					int digit;
-					for (int i = 0; i < sourceNum.size(); i++) {
-
-						digit = sourceNum[i] - '0';
-				        targetNum += digit * pow(sourceBase, sourceNum.size() - (i + 1));
-
-					}
-
+					targetNum = stoi(BasetoDec(sourceNum, sourceBase));
 					cout << "Decimal: " << targetNum << endl;
 					cout << "You will be returned to the main menu." << endl;
 
